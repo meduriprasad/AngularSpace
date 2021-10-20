@@ -1,0 +1,20 @@
+.favourite-wrapper{
+    max-width: 400px;
+}
+
+.favourite-wrapper img{
+    width: 100%;
+    z-index: -1000;
+}
+
+.active{
+    color: blue!important;
+}
+
+.item{
+    width: 400px;
+}
+
+.glyphicon{
+    font-size: 50px;
+}
