@@ -1,5 +1,27 @@
 <span>{{title}}</span>
 <courses></courses>
+<app-course></app-course>
 <br><br><span>Favorite Component</span><br><br>
 <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
-<bootstrap-panel></bootstrap-panel>
+<bootstrap-panel>
+    <div class="heading">Heading</div>
+    <div class="body">
+        <h2>Body</h2>
+        <p>Some content here</p>
+    </div>
+</bootstrap-panel>
+<div *ngIf="courses.length > 0">
+    List of Courses
+</div>
+<div *ngIf="courses.length == 0">
+    No courses yet
+</div>
+<br><br><span>Custom Directive</span><br><br>
+<input type="text" [appInputFormat]="'uppercase'">
+<br><br><span>Template Driven-Forms</span><br><br>
+<contact-form></contact-form>
+<signup-form></signup-form>
+<br><br><span>Form Array</span><br><br>
+<new-course-form></new-course-form>
+<br><br><span>Working with Http Client</span><br><br>
+<posts></posts>

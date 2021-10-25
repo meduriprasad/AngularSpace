@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularBasics';
-  courses:any[]=[1,2];
-  post={
-    isFavorite: true
-  }
-  onFavoriteChanged(isFavorite:any){
-    console.log("Favorite changed",isFavorite);
-  }
+  title = 'skilllog';
 }
