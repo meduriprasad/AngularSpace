@@ -1,3 +1,5 @@
+import { Post } from './interface/post';
+import { PostService } from './services/post.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http'
@@ -14,6 +16,12 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { PostsComponent } from './posts/posts.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,15 +35,30 @@ import { PostsComponent } from './posts/posts.component';
     ContactFormComponent,
     SignupFormComponent,
     NewCourseFormComponent,
-    PostsComponent
+    PostsComponent,
+    NavbarComponent,
+    GithubFollowersComponent,
+    GithubProfileComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: '',component: HomeComponent},
+      {path: 'followers/:id',component: GithubProfileComponent},
+      {path: 'followers',component: GithubFollowersComponent},
+      {path: 'posts',component: PostsComponent},
+      {path: '**',component: NotFoundComponent}
+    ])
   ],
-  providers: [CoursesService],
+  providers: [
+    CoursesService,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
