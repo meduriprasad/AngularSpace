@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pkshop-908b0": {
+      "hosting": {
+        "shoppingkart": [
+          "pkshop-908b0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pkshop-908b0"
+  }
+}

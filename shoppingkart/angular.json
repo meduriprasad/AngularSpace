@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "shoppingkart:build:production",
+            "firebaseProject": "pkshop-908b0",
+            "firebaseHostingSite": "pkshop-908b0"
+          }
         }
       }
     }
